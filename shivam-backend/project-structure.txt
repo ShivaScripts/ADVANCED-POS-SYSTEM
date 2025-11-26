@@ -1,0 +1,473 @@
+.
+├── .DS_Store
+├── .gitattributes
+├── .gitignore
+├── .idea
+│   ├── .gitignore
+│   ├── compiler.xml
+│   ├── encodings.xml
+│   ├── jarRepositories.xml
+│   ├── misc.xml
+│   └── workspace.xml
+├── .mvn
+│   └── wrapper
+│       └── maven-wrapper.properties
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── project-structure.txt
+├── src
+│   ├── .DS_Store
+│   ├── main
+│   │   ├── .DS_Store
+│   │   ├── java
+│   │   │   ├── .DS_Store
+│   │   │   └── com
+│   │   │       ├── .DS_Store
+│   │   │       └── zosh
+│   │   │           ├── .DS_Store
+│   │   │           ├── PosSystemApplication.java
+│   │   │           ├── configrations
+│   │   │           │   ├── AppConfig.java
+│   │   │           │   ├── CustomAuthenticationEntryPoint.java
+│   │   │           │   ├── EmailUtil.java
+│   │   │           │   ├── JwtConstant.java
+│   │   │           │   ├── JwtProvider.java
+│   │   │           │   ├── JwtValidator.java
+│   │   │           │   └── SecurityConfig.java
+│   │   │           ├── controller
+│   │   │           │   ├── AdminDashboardController.java
+│   │   │           │   ├── AuthController.java
+│   │   │           │   ├── BranchAnalyticsController.java
+│   │   │           │   ├── BranchController.java
+│   │   │           │   ├── CategoryController.java
+│   │   │           │   ├── CustomerController.java
+│   │   │           │   ├── EmployeeController.java
+│   │   │           │   ├── HomeController.java
+│   │   │           │   ├── InventoryController.java
+│   │   │           │   ├── OrderController.java
+│   │   │           │   ├── PaymentController.java
+│   │   │           │   ├── ProductController.java
+│   │   │           │   ├── RefundController.java
+│   │   │           │   ├── ShiftReportController.java
+│   │   │           │   ├── StoreAnalyticsController.java
+│   │   │           │   ├── StoreController.java
+│   │   │           │   ├── SubscriptionController.java
+│   │   │           │   ├── SubscriptionPlanController.java
+│   │   │           │   └── UserController.java
+│   │   │           ├── domain
+│   │   │           │   ├── BillingCycle.java
+│   │   │           │   ├── InternalCodeEnum.java
+│   │   │           │   ├── OrderStatus.java
+│   │   │           │   ├── PaymentMethod.java
+│   │   │           │   ├── PaymentOrderStatus.java
+│   │   │           │   ├── PaymentStatus.java
+│   │   │           │   ├── PaymentType.java
+│   │   │           │   ├── StoreStatus.java
+│   │   │           │   ├── SubscriptionStatus.java
+│   │   │           │   └── UserRole.java
+│   │   │           ├── exception
+│   │   │           │   ├── AccessDeniedException.java
+│   │   │           │   ├── GlobalExceptionHandler.java
+│   │   │           │   ├── ResourceNotFoundException.java
+│   │   │           │   └── UserException.java
+│   │   │           ├── mapper
+│   │   │           │   ├── AuthResponseMapper.java
+│   │   │           │   ├── BranchMapper.java
+│   │   │           │   ├── CategoryMapper.java
+│   │   │           │   ├── CustomerMapper.java
+│   │   │           │   ├── InventoryMapper.java
+│   │   │           │   ├── OrderItemMapper.java
+│   │   │           │   ├── OrderMapper.java
+│   │   │           │   ├── ProductMapper.java
+│   │   │           │   ├── RefundMapper.java
+│   │   │           │   ├── ShiftReportMapper.java
+│   │   │           │   ├── StoreMapper.java
+│   │   │           │   ├── SubscriptionMapper.java
+│   │   │           │   └── UserMapper.java
+│   │   │           ├── messaging
+│   │   │           ├── modal
+│   │   │           │   ├── Branch.java
+│   │   │           │   ├── Category.java
+│   │   │           │   ├── Customer.java
+│   │   │           │   ├── Inventory.java
+│   │   │           │   ├── Order.java
+│   │   │           │   ├── OrderItem.java
+│   │   │           │   ├── PasswordResetToken.java
+│   │   │           │   ├── PaymentOrder.java
+│   │   │           │   ├── PaymentSummary.java
+│   │   │           │   ├── Product.java
+│   │   │           │   ├── Refund.java
+│   │   │           │   ├── ShiftReport.java
+│   │   │           │   ├── Store.java
+│   │   │           │   ├── StoreContact.java
+│   │   │           │   ├── Subscription.java
+│   │   │           │   ├── SubscriptionPlan.java
+│   │   │           │   └── User.java
+│   │   │           ├── payload
+│   │   │           │   ├── AdminAnalysis
+│   │   │           │   │   ├── DashboardSummaryDTO.java
+│   │   │           │   │   ├── StoreRegistrationStatDTO.java
+│   │   │           │   │   └── StoreStatusDistributionDTO.java
+│   │   │           │   ├── StoreAnalysis
+│   │   │           │   │   ├── BranchPerformanceDTO.java
+│   │   │           │   │   ├── BranchSalesDTO.java
+│   │   │           │   │   ├── CategorySalesDTO.java
+│   │   │           │   │   ├── PaymentInsightDTO.java
+│   │   │           │   │   ├── RecentSaleDTO.java
+│   │   │           │   │   ├── StoreAlertDTO.java
+│   │   │           │   │   ├── StoreOverviewDTO.java
+│   │   │           │   │   ├── TimeSeriesDataDTO.java
+│   │   │           │   │   └── TimeSeriesPointDTO.java
+│   │   │           │   ├── dto
+│   │   │           │   │   ├── BranchDTO.java
+│   │   │           │   │   ├── BranchDashboardOverviewDTO.java
+│   │   │           │   │   ├── CashierPerformanceDTO.java
+│   │   │           │   │   ├── CategoryDTO.java
+│   │   │           │   │   ├── CategorySalesDTO.java
+│   │   │           │   │   ├── CustomerDTO.java
+│   │   │           │   │   ├── DailySalesDTO.java
+│   │   │           │   │   ├── InventoryDTO.java
+│   │   │           │   │   ├── OrderDTO.java
+│   │   │           │   │   ├── OrderItemDTO.java
+│   │   │           │   │   ├── ProductDTO.java
+│   │   │           │   │   ├── ProductPerformanceDTO.java
+│   │   │           │   │   ├── RefundDTO.java
+│   │   │           │   │   ├── ShiftReportDTO.java
+│   │   │           │   │   ├── StoreDTO.java
+│   │   │           │   │   ├── SubscriptionDTO.java
+│   │   │           │   │   └── UserDTO.java
+│   │   │           │   ├── request
+│   │   │           │   │   ├── CreatePaymentRequest.java
+│   │   │           │   │   ├── ForgotPasswordRequest.java
+│   │   │           │   │   ├── LoginDto.java
+│   │   │           │   │   └── ResetPasswordRequest.java
+│   │   │           │   └── response
+│   │   │           │       ├── ApiResponse.java
+│   │   │           │       ├── ApiResponseBody.java
+│   │   │           │       ├── AuthResponse.java
+│   │   │           │       ├── ExceptionResponse.java
+│   │   │           │       └── PaymentLinkResponse.java
+│   │   │           ├── repository
+│   │   │           │   ├── BranchRepository.java
+│   │   │           │   ├── CategoryRepository.java
+│   │   │           │   ├── CustomerRepository.java
+│   │   │           │   ├── InventoryRepository.java
+│   │   │           │   ├── OrderItemRepository.java
+│   │   │           │   ├── OrderRepository.java
+│   │   │           │   ├── PasswordResetTokenRepository.java
+│   │   │           │   ├── PaymentOrderRepository.java
+│   │   │           │   ├── ProductRepository.java
+│   │   │           │   ├── RefundRepository.java
+│   │   │           │   ├── ShiftReportRepository.java
+│   │   │           │   ├── StoreRepository.java
+│   │   │           │   ├── SubscriptionPlanRepository.java
+│   │   │           │   ├── SubscriptionRepository.java
+│   │   │           │   └── UserRepository.java
+│   │   │           ├── service
+│   │   │           │   ├── AdminDashboardService.java
+│   │   │           │   ├── AuthService.java
+│   │   │           │   ├── BranchAnalyticsService.java
+│   │   │           │   ├── BranchService.java
+│   │   │           │   ├── CategoryService.java
+│   │   │           │   ├── CustomerService.java
+│   │   │           │   ├── EmailService.java
+│   │   │           │   ├── EmployeeService.java
+│   │   │           │   ├── InventoryService.java
+│   │   │           │   ├── OrderService.java
+│   │   │           │   ├── PaymentService.java
+│   │   │           │   ├── ProductService.java
+│   │   │           │   ├── RefundService.java
+│   │   │           │   ├── ShiftReportService.java
+│   │   │           │   ├── StoreAnalyticsService.java
+│   │   │           │   ├── StoreService.java
+│   │   │           │   ├── SubscriptionPlanService.java
+│   │   │           │   ├── SubscriptionService.java
+│   │   │           │   ├── UserService.java
+│   │   │           │   └── impl
+│   │   │           │       ├── AdminDashboardServiceImpl.java
+│   │   │           │       ├── AuthServiceImpl.java
+│   │   │           │       ├── BranchAnalyticsServiceImpl.java
+│   │   │           │       ├── BranchServiceImpl.java
+│   │   │           │       ├── CategoryServiceImpl.java
+│   │   │           │       ├── CustomUserImplementation.java
+│   │   │           │       ├── CustomerServiceImpl.java
+│   │   │           │       ├── DataInitializationComponent.java
+│   │   │           │       ├── EmailServiceImpl.java
+│   │   │           │       ├── EmployeeServiceImpl.java
+│   │   │           │       ├── InventoryServiceImpl.java
+│   │   │           │       ├── OrderServiceImpl.java
+│   │   │           │       ├── PaymentServiceImpl.java
+│   │   │           │       ├── ProductServiceImpl.java
+│   │   │           │       ├── RefundServiceImpl.java
+│   │   │           │       ├── ShiftReportServiceImpl.java
+│   │   │           │       ├── StoreAnalyticsServiceImpl.java
+│   │   │           │       ├── StoreServiceImpl.java
+│   │   │           │       ├── SubscriptionPlanServiceImpl.java
+│   │   │           │       ├── SubscriptionServiceImpl.java
+│   │   │           │       └── UserServiceImpl.java
+│   │   │           └── util
+│   │   │               └── SecurityUtil.java
+│   │   └── resources
+│   │       ├── application.yml
+│   │       ├── docker-compose.yml
+│   │       ├── static
+│   │       └── templates
+│   └── test
+│       └── java
+│           └── com
+│               └── zosh
+│                   └── PosSystemApplicationTests.java
+├── src.zip
+└── target
+    ├── classes
+    │   ├── application.yml
+    │   ├── com
+    │   │   └── zosh
+    │   │       ├── PosSystemApplication.class
+    │   │       ├── configrations
+    │   │       │   ├── AppConfig.class
+    │   │       │   ├── CustomAuthenticationEntryPoint.class
+    │   │       │   ├── EmailUtil.class
+    │   │       │   ├── JwtConstant.class
+    │   │       │   ├── JwtProvider.class
+    │   │       │   ├── JwtValidator.class
+    │   │       │   ├── SecurityConfig$1.class
+    │   │       │   └── SecurityConfig.class
+    │   │       ├── controller
+    │   │       │   ├── AdminDashboardController.class
+    │   │       │   ├── AuthController.class
+    │   │       │   ├── BranchAnalyticsController.class
+    │   │       │   ├── BranchController.class
+    │   │       │   ├── CategoryController.class
+    │   │       │   ├── CustomerController.class
+    │   │       │   ├── EmployeeController.class
+    │   │       │   ├── HomeController.class
+    │   │       │   ├── InventoryController.class
+    │   │       │   ├── OrderController.class
+    │   │       │   ├── PaymentController.class
+    │   │       │   ├── ProductController.class
+    │   │       │   ├── RefundController.class
+    │   │       │   ├── ShiftReportController.class
+    │   │       │   ├── StoreAnalyticsController.class
+    │   │       │   ├── StoreController.class
+    │   │       │   ├── SubscriptionController.class
+    │   │       │   ├── SubscriptionPlanController.class
+    │   │       │   └── UserController.class
+    │   │       ├── domain
+    │   │       │   ├── BillingCycle.class
+    │   │       │   ├── InternalCodeEnum.class
+    │   │       │   ├── OrderStatus.class
+    │   │       │   ├── PaymentMethod.class
+    │   │       │   ├── PaymentOrderStatus.class
+    │   │       │   ├── PaymentStatus.class
+    │   │       │   ├── PaymentType.class
+    │   │       │   ├── StoreStatus.class
+    │   │       │   ├── SubscriptionStatus.class
+    │   │       │   └── UserRole.class
+    │   │       ├── exception
+    │   │       │   ├── AccessDeniedException.class
+    │   │       │   ├── GlobalExceptionHandler.class
+    │   │       │   ├── ResourceNotFoundException.class
+    │   │       │   └── UserException.class
+    │   │       ├── mapper
+    │   │       │   ├── AuthResponseMapper.class
+    │   │       │   ├── BranchMapper.class
+    │   │       │   ├── CategoryMapper.class
+    │   │       │   ├── CustomerMapper.class
+    │   │       │   ├── InventoryMapper.class
+    │   │       │   ├── OrderItemMapper.class
+    │   │       │   ├── OrderMapper.class
+    │   │       │   ├── ProductMapper.class
+    │   │       │   ├── RefundMapper.class
+    │   │       │   ├── ShiftReportMapper.class
+    │   │       │   ├── StoreMapper.class
+    │   │       │   ├── SubscriptionMapper.class
+    │   │       │   └── UserMapper.class
+    │   │       ├── modal
+    │   │       │   ├── Branch$BranchBuilder.class
+    │   │       │   ├── Branch.class
+    │   │       │   ├── Category$CategoryBuilder.class
+    │   │       │   ├── Category.class
+    │   │       │   ├── Customer.class
+    │   │       │   ├── Inventory$InventoryBuilder.class
+    │   │       │   ├── Inventory.class
+    │   │       │   ├── Order$OrderBuilder.class
+    │   │       │   ├── Order.class
+    │   │       │   ├── OrderItem$OrderItemBuilder.class
+    │   │       │   ├── OrderItem.class
+    │   │       │   ├── PasswordResetToken$PasswordResetTokenBuilder.class
+    │   │       │   ├── PasswordResetToken.class
+    │   │       │   ├── PaymentOrder.class
+    │   │       │   ├── PaymentSummary.class
+    │   │       │   ├── Product$ProductBuilder.class
+    │   │       │   ├── Product.class
+    │   │       │   ├── Refund.class
+    │   │       │   ├── ShiftReport.class
+    │   │       │   ├── Store$StoreBuilder.class
+    │   │       │   ├── Store.class
+    │   │       │   ├── StoreContact$StoreContactBuilder.class
+    │   │       │   ├── StoreContact.class
+    │   │       │   ├── Subscription$SubscriptionBuilder.class
+    │   │       │   ├── Subscription.class
+    │   │       │   ├── SubscriptionPlan$SubscriptionPlanBuilder.class
+    │   │       │   ├── SubscriptionPlan.class
+    │   │       │   └── User.class
+    │   │       ├── payload
+    │   │       │   ├── AdminAnalysis
+    │   │       │   │   ├── DashboardSummaryDTO$DashboardSummaryDTOBuilder.class
+    │   │       │   │   ├── DashboardSummaryDTO.class
+    │   │       │   │   ├── StoreRegistrationStatDTO$StoreRegistrationStatDTOBuilder.class
+    │   │       │   │   ├── StoreRegistrationStatDTO.class
+    │   │       │   │   ├── StoreStatusDistributionDTO$StoreStatusDistributionDTOBuilder.class
+    │   │       │   │   └── StoreStatusDistributionDTO.class
+    │   │       │   ├── StoreAnalysis
+    │   │       │   │   ├── BranchPerformanceDTO$BranchPerformanceDTOBuilder.class
+    │   │       │   │   ├── BranchPerformanceDTO.class
+    │   │       │   │   ├── BranchSalesDTO$BranchSalesDTOBuilder.class
+    │   │       │   │   ├── BranchSalesDTO.class
+    │   │       │   │   ├── CategorySalesDTO$CategorySalesDTOBuilder.class
+    │   │       │   │   ├── CategorySalesDTO.class
+    │   │       │   │   ├── PaymentInsightDTO$PaymentInsightDTOBuilder.class
+    │   │       │   │   ├── PaymentInsightDTO.class
+    │   │       │   │   ├── RecentSaleDTO.class
+    │   │       │   │   ├── StoreAlertDTO$StoreAlertDTOBuilder.class
+    │   │       │   │   ├── StoreAlertDTO.class
+    │   │       │   │   ├── StoreOverviewDTO$StoreOverviewDTOBuilder.class
+    │   │       │   │   ├── StoreOverviewDTO.class
+    │   │       │   │   ├── TimeSeriesDataDTO$TimeSeriesDataDTOBuilder.class
+    │   │       │   │   ├── TimeSeriesDataDTO.class
+    │   │       │   │   ├── TimeSeriesPointDTO$TimeSeriesPointDTOBuilder.class
+    │   │       │   │   └── TimeSeriesPointDTO.class
+    │   │       │   ├── dto
+    │   │       │   │   ├── BranchDTO$BranchDTOBuilder.class
+    │   │       │   │   ├── BranchDTO.class
+    │   │       │   │   ├── BranchDashboardOverviewDTO$BranchDashboardOverviewDTOBuilder.class
+    │   │       │   │   ├── BranchDashboardOverviewDTO.class
+    │   │       │   │   ├── CashierPerformanceDTO$CashierPerformanceDTOBuilder.class
+    │   │       │   │   ├── CashierPerformanceDTO.class
+    │   │       │   │   ├── CategoryDTO$CategoryDTOBuilder.class
+    │   │       │   │   ├── CategoryDTO.class
+    │   │       │   │   ├── CategorySalesDTO$CategorySalesDTOBuilder.class
+    │   │       │   │   ├── CategorySalesDTO.class
+    │   │       │   │   ├── CustomerDTO$CustomerDTOBuilder.class
+    │   │       │   │   ├── CustomerDTO.class
+    │   │       │   │   ├── DailySalesDTO$DailySalesDTOBuilder.class
+    │   │       │   │   ├── DailySalesDTO.class
+    │   │       │   │   ├── InventoryDTO$InventoryDTOBuilder.class
+    │   │       │   │   ├── InventoryDTO.class
+    │   │       │   │   ├── OrderDTO$OrderDTOBuilder.class
+    │   │       │   │   ├── OrderDTO.class
+    │   │       │   │   ├── OrderItemDTO$OrderItemDTOBuilder.class
+    │   │       │   │   ├── OrderItemDTO.class
+    │   │       │   │   ├── ProductDTO$ProductDTOBuilder.class
+    │   │       │   │   ├── ProductDTO.class
+    │   │       │   │   ├── ProductPerformanceDTO$ProductPerformanceDTOBuilder.class
+    │   │       │   │   ├── ProductPerformanceDTO.class
+    │   │       │   │   ├── RefundDTO.class
+    │   │       │   │   ├── ShiftReportDTO.class
+    │   │       │   │   ├── StoreDTO$StoreDTOBuilder.class
+    │   │       │   │   ├── StoreDTO.class
+    │   │       │   │   ├── SubscriptionDTO$SubscriptionDTOBuilder.class
+    │   │       │   │   ├── SubscriptionDTO.class
+    │   │       │   │   └── UserDTO.class
+    │   │       │   ├── request
+    │   │       │   │   ├── CreatePaymentRequest.class
+    │   │       │   │   ├── ForgotPasswordRequest.class
+    │   │       │   │   ├── LoginDto.class
+    │   │       │   │   └── ResetPasswordRequest.class
+    │   │       │   └── response
+    │   │       │       ├── ApiResponse.class
+    │   │       │       ├── ApiResponseBody.class
+    │   │       │       ├── AuthResponse.class
+    │   │       │       ├── ExceptionResponse.class
+    │   │       │       └── PaymentLinkResponse.class
+    │   │       ├── repository
+    │   │       │   ├── BranchRepository.class
+    │   │       │   ├── CategoryRepository.class
+    │   │       │   ├── CustomerRepository.class
+    │   │       │   ├── InventoryRepository.class
+    │   │       │   ├── OrderItemRepository.class
+    │   │       │   ├── OrderRepository.class
+    │   │       │   ├── PasswordResetTokenRepository.class
+    │   │       │   ├── PaymentOrderRepository.class
+    │   │       │   ├── ProductRepository.class
+    │   │       │   ├── RefundRepository.class
+    │   │       │   ├── ShiftReportRepository.class
+    │   │       │   ├── StoreRepository.class
+    │   │       │   ├── SubscriptionPlanRepository.class
+    │   │       │   ├── SubscriptionRepository.class
+    │   │       │   └── UserRepository.class
+    │   │       ├── service
+    │   │       │   ├── AdminDashboardService.class
+    │   │       │   ├── AuthService.class
+    │   │       │   ├── BranchAnalyticsService.class
+    │   │       │   ├── BranchService.class
+    │   │       │   ├── CategoryService.class
+    │   │       │   ├── CustomerService.class
+    │   │       │   ├── EmailService.class
+    │   │       │   ├── EmployeeService.class
+    │   │       │   ├── InventoryService.class
+    │   │       │   ├── OrderService.class
+    │   │       │   ├── PaymentService.class
+    │   │       │   ├── ProductService.class
+    │   │       │   ├── RefundService.class
+    │   │       │   ├── ShiftReportService.class
+    │   │       │   ├── StoreAnalyticsService.class
+    │   │       │   ├── StoreService.class
+    │   │       │   ├── SubscriptionPlanService.class
+    │   │       │   ├── SubscriptionService.class
+    │   │       │   ├── UserService.class
+    │   │       │   └── impl
+    │   │       │       ├── AdminDashboardServiceImpl.class
+    │   │       │       ├── AuthServiceImpl.class
+    │   │       │       ├── BranchAnalyticsServiceImpl.class
+    │   │       │       ├── BranchServiceImpl.class
+    │   │       │       ├── CategoryServiceImpl.class
+    │   │       │       ├── CustomUserImplementation.class
+    │   │       │       ├── CustomerServiceImpl.class
+    │   │       │       ├── DataInitializationComponent.class
+    │   │       │       ├── EmailServiceImpl.class
+    │   │       │       ├── EmployeeServiceImpl.class
+    │   │       │       ├── InventoryServiceImpl.class
+    │   │       │       ├── OrderServiceImpl.class
+    │   │       │       ├── PaymentServiceImpl.class
+    │   │       │       ├── ProductServiceImpl.class
+    │   │       │       ├── RefundServiceImpl.class
+    │   │       │       ├── ShiftReportServiceImpl.class
+    │   │       │       ├── StoreAnalyticsServiceImpl.class
+    │   │       │       ├── StoreServiceImpl.class
+    │   │       │       ├── SubscriptionPlanServiceImpl.class
+    │   │       │       ├── SubscriptionServiceImpl.class
+    │   │       │       └── UserServiceImpl.class
+    │   │       └── util
+    │   │           └── SecurityUtil.class
+    │   └── docker-compose.yml
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── maven-archiver
+    │   └── pom.properties
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── pos-system-0.0.1-SNAPSHOT.jar
+    ├── pos-system-0.0.1-SNAPSHOT.jar.original
+    ├── surefire-reports
+    │   ├── TEST-com.shivam.PosSystemApplicationTests.xml
+    │   └── com.shivam.PosSystemApplicationTests.txt
+    └── test-classes
+        └── com
+            └── zosh
+                └── PosSystemApplicationTests.class
+
+68 directories, 403 files

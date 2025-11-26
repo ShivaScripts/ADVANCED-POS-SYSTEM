@@ -1,0 +1,35 @@
+# --- Java / Spring Boot ---
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+mvnw
+mvnw.cmd
+.mvn/
+*.log
+logs/
+
+# --- IDE Settings ---
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+.DS_Store
+
+# --- Frontend (Node/Vite) ---
+node_modules/
+dist/
+coverage/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
