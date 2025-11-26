@@ -178,7 +178,7 @@ Centralized control for store operations, featuring real-time data streaming and
 
 
 
-<img src="screenshots/branchDashboard.jpg" width="100%" alt="Branch Dashboard"/>
+<img src="screenshots/branchDashboard.png" width="100%" alt="Branch Dashboard"/>
 </td>
 <td width="50%" align="center">
 <b>2. Real-Time Orders Feed</b>
@@ -195,7 +195,7 @@ Centralized control for store operations, featuring real-time data streaming and
 
 
 
-<img src="screenshots/livedashboardoforders.jpg" width="100%" alt="Live Orders Dashboard"/>
+<img src="screenshots/livedashboardoforders.png" width="100%" alt="Live Orders Dashboard"/>
 </td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ Centralized control for store operations, featuring real-time data streaming and
 
 
 
-<img src="screenshots/inventory%20management.jpg" width="100%" alt="Inventory Management"/>
+<img src="screenshots/inventory%20management.png" width="100%" alt="Inventory Management"/>
 </td>
 <td align="center">
 <b>4. Employee & RBAC Management</b>
@@ -231,7 +231,7 @@ Centralized control for store operations, featuring real-time data streaming and
 
 
 
-<img src="screenshots/Employee%20Management.jpg" width="100%" alt="Employee Management"/>
+<img src="screenshots/Employee%20Management.png" width="100%" alt="Employee Management"/>
 </td>
 </tr>
 <tr>
@@ -250,7 +250,7 @@ Centralized control for store operations, featuring real-time data streaming and
 
 
 
-<img src="screenshots/Reports%20&%20Analytics.jpg" width="80%" alt="Reports and Analytics"/>
+<img src="screenshots/Reports%20&%20Analytics.png" width="80%" alt="Reports and Analytics"/>
 </td>
 </tr>
 </table>
